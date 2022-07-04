@@ -1,0 +1,17 @@
+{
+  "technoneverdies.bruh": {
+    "sounds": [
+      {
+        "name": "technoneverdies:bruh"
+      }
+    ],
+    "subtitle": "subtitle.technoneverdies.bruh"
+  },
+  "technoneverdies.phil_look_out": {
+    "sounds": [
+      {
+        "name": "technoneverdies:phil_look_out"
+      }
+    ]
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "technoneverdies",
+  "version": "${version}",
+  "name": "Technoblade Never Dies",
+  "description": "A mod with several tributes towards Technoblade.",
+  "authors": [
+    "BluSpring"
+  ],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/technoneverdies/icon.png",
+  "environment": "client",
+  "entrypoints": {},
+  "mixins": [
+    "technoneverdies.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.14.0",
+    "minecraft": "1.19"
+  }
+}
