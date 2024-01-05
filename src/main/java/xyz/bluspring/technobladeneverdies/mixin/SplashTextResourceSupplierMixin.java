@@ -8,6 +8,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import org.spongepowered.asm.mixin.injection.callback.LocalCapture;
+import xyz.bluspring.technobladeneverdies.TechnobladeNeverDies;
 
 import java.util.List;
 
@@ -15,7 +16,7 @@ import java.util.List;
 public class SplashTextResourceSupplierMixin {
     @Inject(at = @At("RETURN"), method = "prepare(Lnet/minecraft/resource/ResourceManager;Lnet/minecraft/util/profiler/Profiler;)Ljava/util/List;", locals = LocalCapture.CAPTURE_FAILHARD, cancellable = true)
     public void customAddTechnoSplash(ResourceManager resourceManager, Profiler profiler, CallbackInfoReturnable<List<String>> cir) {
-        boolean technobladeOnly = true;
+        boolean technobladeOnly = TechnobladeNeverDies.shouldReplaceSplashes;
         List<String> list = new java.util.ArrayList<>(technobladeOnly ? List.of() : cir.getReturnValue());
 
         list.add("Technoblade never dies!");

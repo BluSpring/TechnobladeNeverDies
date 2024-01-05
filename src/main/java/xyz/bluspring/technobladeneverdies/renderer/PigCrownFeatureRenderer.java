@@ -6,18 +6,17 @@ import net.minecraft.client.render.VertexConsumer;
 import net.minecraft.client.render.VertexConsumerProvider;
 import net.minecraft.client.render.entity.feature.FeatureRenderer;
 import net.minecraft.client.render.entity.feature.FeatureRendererContext;
-import net.minecraft.client.render.entity.model.BipedEntityModel;
 import net.minecraft.client.render.entity.model.QuadrupedEntityModel;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.util.Identifier;
 
-public class CrownFeatureRenderer<T extends LivingEntity, M extends QuadrupedEntityModel<T>> extends FeatureRenderer<T, M> {
+public class PigCrownFeatureRenderer<T extends LivingEntity, M extends QuadrupedEntityModel<T>> extends FeatureRenderer<T, M> {
     private static final Identifier CROWN_TEXTURE = new Identifier("technoneverdies", "textures/entity/crown.png");
 
     private final M model;
 
-    public CrownFeatureRenderer(FeatureRendererContext<T, M> context, M model) {
+    public PigCrownFeatureRenderer(FeatureRendererContext<T, M> context, M model) {
         super(context);
 
         this.model = model;

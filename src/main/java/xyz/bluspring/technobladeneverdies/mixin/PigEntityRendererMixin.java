@@ -10,7 +10,7 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
-import xyz.bluspring.technobladeneverdies.renderer.CrownFeatureRenderer;
+import xyz.bluspring.technobladeneverdies.renderer.PigCrownFeatureRenderer;
 
 @Mixin(PigEntityRenderer.class)
 public abstract class PigEntityRendererMixin extends MobEntityRenderer<PigEntity, PigEntityModel<PigEntity>> {
@@ -20,7 +20,7 @@ public abstract class PigEntityRendererMixin extends MobEntityRenderer<PigEntity
 
     @Inject(at = @At("TAIL"), method = "<init>")
     public void addCrownFeature(EntityRendererFactory.Context context, CallbackInfo ci) {
-        this.addFeature(new CrownFeatureRenderer<PigEntity, PigEntityModel<PigEntity>>(
+        this.addFeature(new PigCrownFeatureRenderer<PigEntity, PigEntityModel<PigEntity>>(
                 this,
                 new PigEntityModel(context.getPart(EntityModelLayers.PIG_SADDLE)))
         );
